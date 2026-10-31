@@ -56,7 +56,10 @@ class Program
         }
         
         Console.WriteLine($"The largest number is: {max}");
-        Console.WriteLine($"The smallest positive number is: {minPositive}");
+        if (minPositive != int.MaxValue)
+        {
+            Console.WriteLine($"The smallest positive number is: {minPositive}");
+        }
 
         numbers.Sort(); // Sort the list
 

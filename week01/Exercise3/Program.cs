@@ -9,7 +9,6 @@ class Program
         int userGuess;
         int guessCount = 0;
 
-        Console.WriteLine("Welcome to the Guess My Number game!");
         
         do
         {
@@ -29,6 +28,7 @@ class Program
             {
                 Console.WriteLine("You guessed it!");
                 Console.WriteLine($"It took you {guessCount} guesses.");
+                Console.WriteLine();
 
                 Console.Write("Do you want to play again (yes/no):? ");
                 string playAgain = Console.ReadLine().ToLower();

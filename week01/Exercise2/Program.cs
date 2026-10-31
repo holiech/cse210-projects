@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Enter your grade percentage: ");
+        Console.Write("What is your grade percentage? ");
         if (double.TryParse(Console.ReadLine(), out double grade))
         {
             char letterGrade;
@@ -51,7 +51,7 @@ class Program
 
             if (letterGrade != 'F' && grade >= 70)
             {
-                Console.WriteLine("Congratulations! you passed the course!");
+                Console.WriteLine("Congratulations! You passed the course!");
             }
             else if (letterGrade == 'F')
             {
