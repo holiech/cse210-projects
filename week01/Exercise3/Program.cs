@@ -28,8 +28,9 @@ class Program
             else
             {
                 Console.WriteLine("You guessed it!");
-                Console.WriteLine($"It took you {guessCount} guesses to find the magic number.");
-                Console.Write("Do you want to play again? (yes/no): ");
+                Console.WriteLine($"It took you {guessCount} guesses.");
+
+                Console.Write("Do you want to play again (yes/no):? ");
                 string playAgain = Console.ReadLine().ToLower();
                 
                 if (playAgain != "yes")
@@ -40,6 +41,8 @@ class Program
                 {
                     magicNumber = random.Next(1, 101);
                     guessCount = 0;
+                    Console.WriteLine();
+                    
                 }
             }
         } while (true);

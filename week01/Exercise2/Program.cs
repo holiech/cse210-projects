@@ -15,7 +15,7 @@ class Program
             if (grade >= 90)
             {
                 letterGrade = 'A';
-                if (lastDigit >= 3)
+                if (lastDigit < 3)
                     gradeSign = "-";
             }
             else if (grade >= 80)
@@ -23,7 +23,7 @@ class Program
                 letterGrade = 'B';
                 if (lastDigit >= 7)
                     gradeSign = "+";
-                else if (lastDigit< 3)
+                else if (lastDigit < 3)
                     gradeSign = "-";
             }
             else if (grade >= 70)

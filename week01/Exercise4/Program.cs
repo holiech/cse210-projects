@@ -6,11 +6,13 @@ class Program
     static void Main(string[] args)
     {
         List<int> numbers = new List<int>();
+
+        Console.Write("Enter a list of numbers, type 0 when finished.");
         
         int userNumber = -1;
         while (userNumber != 0)
         {
-            Console.Write("Enter a number (0 to quit): ");
+            Console.Write("Enter number: ");
             
             string userResponse = Console.ReadLine();
             userNumber = int.Parse(userResponse);
@@ -19,6 +21,12 @@ class Program
             {
                 numbers.Add(userNumber);
             }
+        }
+
+        if (numbers.Count == 0)
+        {
+            Console.WriteLine("No numbers were entered.");
+            return;
         }
 
         int sum = 0;
