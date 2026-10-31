@@ -7,7 +7,7 @@ class Program
     {
         List<int> numbers = new List<int>();
 
-        Console.Write("Enter a list of numbers, type 0 when finished.");
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
         
         int userNumber = -1;
         while (userNumber != 0)

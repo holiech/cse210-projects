@@ -15,7 +15,7 @@ class Program
             if (grade >= 90)
             {
                 letterGrade = 'A';
-                if (lastDigit < 3)
+                if (lastDigit < 3 && grade < 100)
                     gradeSign = "-";
             }
             else if (grade >= 80)
@@ -47,11 +47,11 @@ class Program
                 letterGrade = 'F';
             }
 
-            Console.WriteLine($"Your letter grade is: {letterGrade}{gradeSign}");
+            Console.WriteLine($"Your grade is: {letterGrade}{gradeSign}");
 
             if (letterGrade != 'F' && grade >= 70)
             {
-                Console.WriteLine("Congratulations, you passed the course!");
+                Console.WriteLine("Congratulations! you passed the course!");
             }
             else if (letterGrade == 'F')
             {
