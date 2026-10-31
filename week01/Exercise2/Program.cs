@@ -10,34 +10,36 @@ class Program
             char letterGrade;
             string gradeSign = "";
 
+            int lastDigit =(int) grade % 10;
+
             if (grade >= 90)
             {
                 letterGrade = 'A';
-                if (grade % 10 >= 7)
-                    gradeSign = "+";
+                if (lastDigit >= 3)
+                    gradeSign = "-";
             }
             else if (grade >= 80)
             {
                 letterGrade = 'B';
-                if (grade % 10 >= 7)
+                if (lastDigit >= 7)
                     gradeSign = "+";
-                else if (grade % 10 < 3)
+                else if (lastDigit< 3)
                     gradeSign = "-";
             }
             else if (grade >= 70)
             {
                 letterGrade = 'C';
-                if (grade % 10 >= 7)
+                if (lastDigit >= 7)
                     gradeSign = "+";
-                else if (grade % 10 < 3)
+                else if (lastDigit< 3)
                     gradeSign = "-";
             }
             else if (grade >= 60)
             {
                 letterGrade = 'D';
-                if (grade % 10 >= 7)
+                if (lastDigit >= 7)
                     gradeSign = "+";
-                else if (grade % 10 < 3)
+                else if (lastDigit < 3)
                     gradeSign = "-";
             }
             else
