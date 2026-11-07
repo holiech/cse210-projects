@@ -11,10 +11,10 @@ public class Journal
     {
         Entry newEntry = new Entry();
 
-        newEntry._date = DateTime.Today.ToString("MM/dd/yyyy");
-        newEntry._promptText = promptGenerator.GetPrompt();
-        Console.WriteLine($"{newEntry._promptText}");
-        newEntry._entryText = Console.ReadLine();
+        newEntry.Text = DateTime.Today.ToString("MM/dd/yyyy");
+        newEntry.Prompt = promptGenerator.GetPrompt();
+        Console.WriteLine($"{newEntry.Prompt}");
+        newEntry.Text = Console.ReadLine();
         Entries.Add(newEntry);
 
         Console.WriteLine("Entry saved successfully.");
@@ -24,7 +24,7 @@ public class Journal
     {
         foreach (Entry entry in Entries)
         {
-            Console.WriteLine($"{entry._date}\nPrompt: {entry._promptText}\nResponse: {entry._entryText}\n");
+            Console.WriteLine($"{entry.Date}\nPrompt: {entry.Prompt}\nResponse: {entry.Text}\n");
         }
     }
 
@@ -34,7 +34,7 @@ public class Journal
         {
             foreach (Entry entry in Entries)
             {
-                outputFile.WriteLine($"Date: {entry._date}|{entry._promptText}|{entry._entryText}");
+                outputFile.WriteLine($"Date: {entry.Date}|{entry.Prompt}|{entry.Text}");
             }
         }
         Console.WriteLine($"Journal saved to {filename}.");
@@ -64,9 +64,9 @@ public class Journal
                     {
                         Entry entry = new Entry
                         {
-                            _date = parts[0].Trim(),
-                            _promptText = parts[1].Trim(),
-                            _entryText = parts[2].Trim()
+                            Date = parts[0].Trim(),
+                            Prompt = parts[1].Trim(),
+                            Text = parts[2].Trim()
                         };
                         Entries.Add(entry);
                     }
