@@ -11,7 +11,7 @@ public class Journal
     {
         Entry newEntry = new Entry();
 
-        newEntry.Text = DateTime.Today.ToString("MM/dd/yyyy");
+        newEntry.Date = DateTime.Today.ToString("MM/dd/yyyy");
         newEntry.Prompt = promptGenerator.GetPrompt();
         Console.WriteLine($"{newEntry.Prompt}");
         newEntry.Text = Console.ReadLine();
