@@ -20,3 +20,4 @@ public class PromptGenerator
         return prompts[index];
     }
 }
+
